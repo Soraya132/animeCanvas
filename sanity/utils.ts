@@ -39,8 +39,6 @@ interface UrlQueryParams {
 
 export function formUrlQuery({ params, key, value, keysToRemove }: UrlQueryParams) {
   const currentUrl = qs.parse(params);
-  console.log(currentUrl,key,value)
-
   if(keysToRemove) {
     keysToRemove.forEach((keyToRemove) => {
       delete currentUrl[keyToRemove];
